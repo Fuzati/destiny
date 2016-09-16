@@ -1,0 +1,6 @@
+<a href="<%=new_character_path%>">Add New</a>
+<ul>
+<% @characters.each do |c| %>
+    <li><%=c.name%></li>
+<% end %>
+</ul>
