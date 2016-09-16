@@ -11,7 +11,7 @@ class CharactersController < ApplicationController
   def create
     @character = Character.new character_params
     if @character.save
-      redirect_to character_path
+      redirect_to root_path
     else
       render :action => 'new'
     end
@@ -22,6 +22,6 @@ class CharactersController < ApplicationController
 
   private
   def character_params
-    params.require(character).permit(:name)
+    params.require(:character).permit(:name)
   end
 end
