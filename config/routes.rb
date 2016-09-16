@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resources :characters,:character_types,:weapons 
+  root to: 'characters#index'
+  resources :characters
 end
